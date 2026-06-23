@@ -11,7 +11,7 @@ main()
 	printCn(aho);
 }
 ```
-The type `SYMLIST` can be used to hold a Lisp-style linked list. Lisp-style functions are available such as `car`,`cdr`,`cons`,`setq`,`append`.
+The type `SYMLIST` can be used to hold a Lisp-style linked list. Lisp-style functions are available such as `car`,`cdr`,`cons`,`setq`, and `append`.
 
 When we execute a code
 ```c
@@ -52,4 +52,4 @@ main()
 }
 
 ```
-The function `multilist` is a program to repeat the list `x` `n` times. Since C has no constructor or descructor, we need to do the object creation and collection manually; `count` is a function to increase the reference count of the object denoted by the argument variable, and `collect` counts down the reference count and free the memory if needed. The function `valueOf` is a function just count down the reference count but do not collect the object (because the reference count will be increased when the returned value is assigned to another variable).
+The function `multilist` is a program to repeat the list `x` `n` times. Since C has no constructor or destructor, we need to do the object creation and collection manually; `count` is a function to increase the reference count of the object denoted by the argument variable, and `collect` counts down the reference count and free the memory if needed. The function `valueOf` is a function just count down the reference count but do not collect the object (because the reference count will be increased when the returned value is assigned to another variable).
